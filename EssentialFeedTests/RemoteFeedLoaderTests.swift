@@ -60,16 +60,18 @@ final class RemoteFeedLoaderTests: XCTestCase {
     }
 
     private class HTTPClientSpy: HTTPClient {
-        var requestedURLs: [URL] = []
+        var requestedURLs: [URL] {
+            return messages.map({$0.url})
+        }
+        var messages = [(url: URL, completion: (Error) -> Void)]()
         
         var completions = [(Error) -> Void]()
         func get(from url: URL, completion: @escaping (Error) -> ()) {
-            completions.append(completion)
-            requestedURLs.append(url)
+            messages.append((url, completion))
         }
         
-        func complete(with error: Error) {
-            completions[0](error)
+        func complete(with error: Error, at index: Int = 0) {
+            messages[index].completion(error)
         }
         
         
