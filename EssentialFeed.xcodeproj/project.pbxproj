@@ -112,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				B8B062272A6146150020339B /* FeedAPI */,
+				B85C6DD12A40A2EF00C75377 /* Feed Feature */,
 				B85C6D9D2A40A26400C75377 /* AppDelegate.swift */,
 				B85C6D9F2A40A26400C75377 /* SceneDelegate.swift */,
 				B85C6DA12A40A26400C75377 /* ViewController.swift */,
@@ -119,7 +120,6 @@
 				B85C6DA62A40A26600C75377 /* Assets.xcassets */,
 				B85C6DA82A40A26600C75377 /* LaunchScreen.storyboard */,
 				B85C6DAB2A40A26600C75377 /* Info.plist */,
-				B85C6DD12A40A2EF00C75377 /* Feed Feature */,
 			);
 			path = EssentialFeed;
 			sourceTree = "<group>";
